@@ -11,9 +11,9 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    Menu *m = new Menu;
-    Game *g = new Game;
-    Scores *s = new Scores;
+    m = new Menu;
+    g = new Game;
+    s = new Scores;
 
     ui->app->insertWidget(0, m);
     ui->app->insertWidget(1, g);
@@ -21,11 +21,11 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->app->setCurrentIndex(0);
 
-    connect(m, SIGNAL(showMenu()), this, SLOT(setMenu()));
     connect(m, SIGNAL(showGame()), this, SLOT(setGame()));
     connect(m, SIGNAL(showScores()), this, SLOT(setScores()));
 
     connect(s, SIGNAL(showMenu()), this, SLOT(setMenu()));
+    connect(g, SIGNAL(endGame()), this, SLOT(saveScore()));
 }
 
 MainWindow::~MainWindow()
@@ -41,9 +41,17 @@ void MainWindow::setMenu()
 void MainWindow::setGame()
 {
     ui->app->setCurrentIndex(1);
+    g->initGame();
 }
 
 void MainWindow::setScores()
 {
     ui->app->setCurrentIndex(2);
 }
+
+void MainWindow::saveScore()
+{
+    s->saveScore(g->getScore());
+    ui->app->setCurrentIndex(0);
+}
+
