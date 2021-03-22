@@ -17,5 +17,10 @@ public:
 
 private:
     Ui::MainWindow *ui;
+
+    void setMenu();
+    void setGame();
+    void setScores();
+
 };
 #endif // MAINWINDOW_H

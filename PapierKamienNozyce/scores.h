@@ -15,8 +15,14 @@ public:
     explicit Scores(QWidget *parent = nullptr);
     ~Scores();
 
+private slots:
+    void on_pushButton_clicked();
+
 private:
     Ui::Scores *ui;
+
+signals:
+    void showMenu();
 };
 
 #endif // SCORES_H

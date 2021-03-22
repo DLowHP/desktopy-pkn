@@ -12,3 +12,8 @@ Scores::~Scores()
 {
     delete ui;
 }
+
+void Scores::on_pushButton_clicked()
+{
+    emit showMenu();
+}

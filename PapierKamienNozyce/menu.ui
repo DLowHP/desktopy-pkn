@@ -6,13 +6,115 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>800</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="4" rowspan="2">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <spacer name="marginTop">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="title">
+       <property name="styleSheet">
+        <string notr="true">font-size: 24px;
+color: #000;</string>
+       </property>
+       <property name="text">
+        <string>Papier Kamień Nożyce</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnPlay">
+       <property name="styleSheet">
+        <string notr="true">font-size: 24px;
+color: #000;</string>
+       </property>
+       <property name="text">
+        <string>Graj</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnScores">
+       <property name="styleSheet">
+        <string notr="true">font-size: 24px;
+color: #000;</string>
+       </property>
+       <property name="text">
+        <string>Wyniki</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnExit">
+       <property name="styleSheet">
+        <string notr="true">font-size: 24px;
+color: #000;</string>
+       </property>
+       <property name="text">
+        <string>Wyjście</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="marginBottom">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item row="0" column="5" rowspan="2">
+    <spacer name="marginRight">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="0" column="0" rowspan="2">
+    <spacer name="marginLeft">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>
