@@ -15,7 +15,8 @@ public:
     explicit Game(QWidget *parent = nullptr);
     ~Game();
 
-
+    QVector<QString> getScore();
+    void initGame();
 
 private slots:
 
@@ -28,6 +29,8 @@ private slots:
     void setComputerImg();
 
 
+    void on_btnMenu_clicked();
+
 private:
     Ui::Game *ui;
 
@@ -35,6 +38,9 @@ private:
     int computerScore = 0;
     int playerScore = 0;
     int random;
+
+signals:
+    void endGame();
 
 };
 

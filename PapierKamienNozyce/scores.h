@@ -15,6 +15,8 @@ public:
     explicit Scores(QWidget *parent = nullptr);
     ~Scores();
 
+    void saveScore(QVector<QString> score);
+
 private slots:
     void on_pushButton_clicked();
 

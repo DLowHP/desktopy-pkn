@@ -2,12 +2,14 @@
 #include "ui_game.h"
 
 #include <QRandomGenerator>
+#include <QSettings>
 
 Game::Game(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Game)
 {
     ui->setupUi(this);
+
     QPixmap Pix (":/images/img/questionmark.png");
 
     ui->leftPhoto->setPixmap(Pix.scaled(200,300,Qt::KeepAspectRatio));
@@ -107,4 +109,37 @@ void Game::on_scissorsButton_clicked()
             ui->playerScore->setText("Punkty gracza: " + QString::number(playerScore));
 
         }   else ui->resultLabel->setText("Remis");
+}
+
+void Game::on_btnMenu_clicked()
+{
+    emit endGame();
+}
+
+QVector<QString> Game::getScore()
+{
+    QVector<QString> score;
+    QString name = qgetenv("USER");
+    if (name.isEmpty())
+        name = qgetenv("USERNAME");
+    score.insert(0, name);
+    score.insert(1, QString::number(playerScore));
+    score.insert(2, QString::number(computerScore));
+    return score;
+}
+
+void Game::initGame()
+{
+    QPixmap Pix (":/images/img/questionmark.png");
+
+    ui->leftPhoto->setPixmap(Pix.scaled(200,300,Qt::KeepAspectRatio));
+    ui->rightPhoto->setPixmap(Pix.scaled(200,300,Qt::KeepAspectRatio));
+
+    ui->resultLabel->setText("Start!");
+
+    playerScore = 0;
+    computerScore = 0;
+
+    ui->playerScore->setText("Punkty gracza: " + QString::number(playerScore));
+    ui->computerScore->setText("Punkty komputera: " + QString::number(computerScore));
 }

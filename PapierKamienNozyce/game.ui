@@ -15,71 +15,26 @@
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
-    <layout class="QHBoxLayout" name="scoreLayout">
-     <item>
-      <widget class="QLabel" name="playerScore">
-       <property name="font">
-        <font>
-         <family>Calibri Light</family>
-         <pointsize>18</pointsize>
-         <italic>false</italic>
-        </font>
-       </property>
-       <property name="text">
-        <string>Punkty Gracza: 0</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="computerScore">
-       <property name="font">
-        <font>
-         <family>Calibri Light</family>
-         <pointsize>18</pointsize>
-         <italic>false</italic>
-        </font>
-       </property>
-       <property name="text">
-        <string>Punkty Komputera: 0</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-     </item>
-    </layout>
+    <widget class="QPushButton" name="btnMenu">
+     <property name="text">
+      <string>Powrót do menu</string>
+     </property>
+    </widget>
    </item>
-   <item row="1" column="0">
-    <layout class="QHBoxLayout" name="gameLayout">
-     <item>
-      <widget class="QLabel" name="leftPhoto">
-       <property name="text">
-        <string>Photo 1</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_3"/>
-     </item>
-     <item>
-      <widget class="QLabel" name="rightPhoto">
-       <property name="text">
-        <string>Photo 2</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-     </item>
-    </layout>
+   <item row="0" column="1">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
    </item>
-   <item row="2" column="0">
+   <item row="3" column="0" colspan="2">
     <widget class="QLabel" name="resultLabel">
      <property name="font">
       <font>
@@ -96,7 +51,7 @@
      </property>
     </widget>
    </item>
-   <item row="3" column="0">
+   <item row="4" column="0" colspan="2">
     <layout class="QHBoxLayout" name="bottomLayout" stretch="0,0,0">
      <property name="spacing">
       <number>23</number>
@@ -170,6 +125,71 @@
        </property>
        <property name="text">
         <string>Nożyce</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="2" column="0" colspan="2">
+    <layout class="QHBoxLayout" name="gameLayout">
+     <item>
+      <widget class="QLabel" name="leftPhoto">
+       <property name="text">
+        <string>Photo 1</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="rightPhoto">
+       <property name="text">
+        <string>Photo 2</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0" colspan="2">
+    <layout class="QHBoxLayout" name="scoreLayout">
+     <item>
+      <widget class="QLabel" name="playerScore">
+       <property name="font">
+        <font>
+         <family>Calibri Light</family>
+         <pointsize>18</pointsize>
+         <italic>false</italic>
+        </font>
+       </property>
+       <property name="text">
+        <string>Punkty Gracza: 0</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="computerScore">
+       <property name="font">
+        <font>
+         <family>Calibri Light</family>
+         <pointsize>18</pointsize>
+         <italic>false</italic>
+        </font>
+       </property>
+       <property name="text">
+        <string>Punkty Komputera: 0</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </item>
